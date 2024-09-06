@@ -9,6 +9,6 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "author": "stephen grider",
+  "author": "Mischer",
   "license": "ISC"
 }
