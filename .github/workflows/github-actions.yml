@@ -1,6 +1,6 @@
-name: GitHub Actions Demo
+name: Run test
 
-run-name: ${{ github.actor }} is testing
+run-name: ${{ github.actor }} start running the tests
 on:
   push:
     branches:
