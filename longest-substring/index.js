@@ -22,8 +22,4 @@ function longestSubstring(str) {
     return maxLength;
 }
 
-const result = longestSubstring('dvdf');
-console.log(result);
-console.log(result === 3); // should be 'vdf'.length = 3
-
-module.exports = result;
+module.exports = longestSubstring;

@@ -1,33 +1,44 @@
-const tooSum = require('./index');
+const longestSubstring = require('./index');
 
-test('function tooSum exists', () => {
-  expect(typeof tooSum).toEqual('function');
+// Тесты для функции longestSubstring
+describe('longestSubstring function', () => {
+  test('Should return 3 for input "abcabcbb"', () => {
+    const result = longestSubstring("abcabcbb");
+    expect(result).toBe(3);
+  });
+
+  test('Should return 1 for input "bbbbb"', () => {
+    const result = longestSubstring("bbbbb");
+    expect(result).toBe(1);
+  });
+
+  test('Should return 3 for input "pwwkew"', () => {
+    const result = longestSubstring("pwwkew");
+    expect(result).toBe(3);
+  });
+
+  test('Should return 3 for input "dvdf"', () => {
+    const result = longestSubstring("dvdf");
+    expect(result).toBe(3);
+  });
+
+  test('Should return 1 for input " "', () => {
+    const result = longestSubstring(" ");
+    expect(result).toBe(1);
+  });
+
+  test('Should return 0 for empty string', () => {
+    const result = longestSubstring("");
+    expect(result).toBe(0);
+  });
+
+  test('Should return 5 for input "abcde"', () => {
+    const result = longestSubstring("abcde");
+    expect(result).toBe(5);
+  });
+
+  test('Should return 7 for input "abcdefgabcdef"', () => {
+    const result = longestSubstring("abcdefgabcdef");
+    expect(result).toBe(7);
+  });
 });
-
-test('chunk divides an array of 10 elements with chunk size 2', () => {
-  const arr = [2, 7, 11, 15];
-  const sum = tooSum(arr, 9);
-
-  expect(sum).toEqual([0, 1]);
-});
-
-/*test('chunk divides an array of 3 elements with chunk size 1', () => {
-  const arr = [1, 2, 3];
-  const chunked = tooSum(arr, 1);
-
-  expect(chunked).toEqual([[1], [2], [3]]);
-});
-
-test('chunk divides an array of 5 elements with chunk size 3', () => {
-  const arr = [1, 2, 3, 4, 5];
-  const chunked = tooSum(arr, 3);
-
-  expect(chunked).toEqual([[1, 2, 3], [4, 5]]);
-});
-
-test('chunk divides an array of 13 elements with chunk size 5', () => {
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-  const chunked = tooSum(arr, 5);
-
-  expect(chunked).toEqual([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13]]);
-});*/
