@@ -57,7 +57,7 @@ describe('stringToInt function', () => {
         expect(stringToInt("")).toBe(0);
     });
     test('Returns 0 for a string with only whitespace', () => {
-        expect(stringToInt("    ")).toBe(1);
+        expect(stringToInt("    ")).toBe(0);
     });
     test('Returns 0 for "abc" with no digits', () => {
         expect(stringToInt("abc")).toBe(0);
